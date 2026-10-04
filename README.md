@@ -94,7 +94,7 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 | Unendliche Geduld | [Erlang A](https://github.com/sebastian-hanisch/erlang-a-demo) |
 | Konstante Ankunftsrate | [Wurzel-Personalregel (Halfin-Whitt)](https://github.com/sebastian-hanisch/square-root-staffing-demo), [zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |
 | Eine gemeinsame Schlange, kein Kunde wählt | [Power-of-d-Choices](https://github.com/sebastian-hanisch/power-of-d-demo) |
-| Alle Lkw gleich wichtig | Prioritätsklassen |
+| Alle Lkw gleich wichtig | [Prioritätsklassen](https://github.com/sebastian-hanisch/priority-queue-demo) |
 
 Kein Folgestück: unterschiedlich schnelle Spuren.
 

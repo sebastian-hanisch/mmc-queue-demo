@@ -289,7 +289,7 @@ st.markdown(
 | **Unendliche Geduld** | Niemand dreht um. Mit Abwanderung bleibt auch bei Überlast ein Gleichgewicht. | **[Erlang A](https://sebastianhanisch-erlang-a-demo.streamlit.app/)** |
 | **Konstante Ankunftsrate** | Echte Gates haben Morgenspitzen; die Gleichgewichtsformel mit dem Tagesmittel unterschätzt die Spitze. | **[Wurzel-Personalregel (Halfin-Whitt)](https://sebastianhanisch-square-root-staffing-demo.streamlit.app/)**, **[zeitvariable Ankünfte](https://sebastianhanisch-time-varying-arrivals-demo.streamlit.app/)** |
 | **Eine gemeinsame Schlange, kein Kunde wählt** | Wählen Kunden selbst eine Spur (kürzeste Schlange), liegt das Ergebnis zwischen „getrennt“ und „gemeinsam“. Hier gibt es nur die zufällige Zuteilung als Gegenbeispiel. | **[Power-of-d-Choices](https://sebastianhanisch-power-of-d-demo.streamlit.app/)** |
-| **Alle Lkw gleich wichtig** | Eilige Lkw brauchen Vorfahrt; das verschiebt die Wartezeit zwischen den Klassen. | **Prioritätsklassen** (Folgestück) |
+| **Alle Lkw gleich wichtig** | Eilige Lkw brauchen Vorfahrt; das verschiebt die Wartezeit zwischen den Klassen. | **[Prioritätsklassen](https://sebastianhanisch-priority-queue-demo.streamlit.app/)** |
 | **Alle Spuren gleich schnell** | Mit unterschiedlich schnellen Spuren gibt es keine einfache Formel mehr. | kein Folgestück |
 """
 )
