@@ -81,7 +81,7 @@ Alle Zahlen stehen in `tests/test_claims.py`; Zeiten bei 3 min Abfertigung je Sp
   Probleme hier bei mehr Spuren geprüft werden.
 - [`ems_demo`](https://github.com/sebastian-hanisch/ems-demo): Rettungsdienst-Standortplanung mit dem **Hypercube Queueing
   Model**, einer Markov-Kette über mehrere Server; ihr Korrektheitstest ist die **Erlang-B**-Formel des Verlustsystems. Hier ist
-  es das Wartesystem (Erlang C); Erlang B behandelt ein Folgestück der Linie.
+  es das Wartesystem (Erlang C); Erlang B behandelt [erlang-b-demo](https://github.com/sebastian-hanisch/erlang-b-demo) (Stück 8).
 
 ## Bewusst nicht umgesetzt
 
@@ -90,7 +90,7 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 | Annahme | Folgestück |
 |---|---|
 | Abfertigungsdauer exponentiell | M/G/1, Kingman-Näherung |
-| Unbegrenzte Schlange | M/M/c/c (Erlang B) |
+| Unbegrenzte Schlange | [M/M/c/c (Erlang B)](https://github.com/sebastian-hanisch/erlang-b-demo) |
 | Unendliche Geduld | [Erlang A](https://github.com/sebastian-hanisch/erlang-a-demo) |
 | Konstante Ankunftsrate | [Wurzel-Personalregel (Halfin-Whitt)](https://github.com/sebastian-hanisch/square-root-staffing-demo), [zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |
 | Eine gemeinsame Schlange, kein Kunde wählt | [Power-of-d-Choices](https://github.com/sebastian-hanisch/power-of-d-demo) |
