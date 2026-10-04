@@ -286,8 +286,8 @@ st.markdown(
 |---|---|---|
 | **Abfertigungsdauer exponentiell** | Die Wartezeit hängt von der Streuung der Dauer ab; Erlang C gilt dann nicht mehr. | **M/G/1, Kingman-Näherung** (Folgestück) |
 | **Unbegrenzte Schlange** | Stellplätze sind knapp: wer bei voller Zufahrt ankommt, geht verloren. Das Gegenstück ohne Warten heißt Erlang B; `ems_demo` prüft sich an dieser Formel. | **M/M/c/c (Erlang B)** (Folgestück) |
-| **Unendliche Geduld** | Niemand dreht um. Mit Abwanderung bleibt auch bei Überlast ein Gleichgewicht. | **Erlang A** (Folgestück) |
-| **Konstante Ankunftsrate** | Echte Gates haben Morgenspitzen; die Gleichgewichtsformel mit dem Tagesmittel unterschätzt die Spitze. | **Wurzel-Personalregel (Halfin-Whitt)**, **zeitvariable Ankünfte** (Folgestücke) |
+| **Unendliche Geduld** | Niemand dreht um. Mit Abwanderung bleibt auch bei Überlast ein Gleichgewicht. | **[Erlang A](https://sebastianhanisch-erlang-a-demo.streamlit.app/)** |
+| **Konstante Ankunftsrate** | Echte Gates haben Morgenspitzen; die Gleichgewichtsformel mit dem Tagesmittel unterschätzt die Spitze. | **[Wurzel-Personalregel (Halfin-Whitt)](https://sebastianhanisch-square-root-staffing-demo.streamlit.app/)**, **[zeitvariable Ankünfte](https://sebastianhanisch-time-varying-arrivals-demo.streamlit.app/)** |
 | **Eine gemeinsame Schlange, kein Kunde wählt** | Wählen Kunden selbst eine Spur (kürzeste Schlange), liegt das Ergebnis zwischen „getrennt“ und „gemeinsam“. Hier gibt es nur die zufällige Zuteilung als Gegenbeispiel. | **Power-of-d-Choices** (Folgestück) |
 | **Alle Lkw gleich wichtig** | Eilige Lkw brauchen Vorfahrt; das verschiebt die Wartezeit zwischen den Klassen. | **Prioritätsklassen** (Folgestück) |
 | **Alle Spuren gleich schnell** | Mit unterschiedlich schnellen Spuren gibt es keine einfache Formel mehr. | kein Folgestück |

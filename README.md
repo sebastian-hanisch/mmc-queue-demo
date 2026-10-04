@@ -1,5 +1,7 @@
 # M/M/c – mehrere Spuren, eine Schlange (Streamlit-Demo)
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-mmc-queue-demo.streamlit.app/)**
+
 Interaktive Demo zur **M/M/c-Schlange** und ihrer Warteformel **Erlang C**, am Terminal-Gate aus
 [mm1-queue-demo](https://github.com/sebastian-hanisch/mm1-queue-demo), jetzt mit c gleich schnellen Spuren und einer
 gemeinsamen Schlange. **Drittes Stück der Konzepte-Linie „Warteschlangentheorie und Simulation“** im Portfolio von
@@ -88,8 +90,8 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 |---|---|
 | Abfertigungsdauer exponentiell | M/G/1, Kingman-Näherung |
 | Unbegrenzte Schlange | M/M/c/c (Erlang B) |
-| Unendliche Geduld | Erlang A |
-| Konstante Ankunftsrate | Wurzel-Personalregel (Halfin-Whitt), zeitvariable Ankünfte |
+| Unendliche Geduld | [Erlang A](https://github.com/sebastian-hanisch/erlang-a-demo) |
+| Konstante Ankunftsrate | [Wurzel-Personalregel (Halfin-Whitt)](https://github.com/sebastian-hanisch/square-root-staffing-demo), [zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |
 | Eine gemeinsame Schlange, kein Kunde wählt | Power-of-d-Choices |
 | Alle Lkw gleich wichtig | Prioritätsklassen |
 
