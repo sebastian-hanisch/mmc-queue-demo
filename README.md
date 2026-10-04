@@ -65,7 +65,8 @@ Alle Zahlen stehen in `tests/test_claims.py`; Zeiten bei 3 min Abfertigung je Sp
 - Die Auslastung gilt je Spur, bei gleichem Angebot ändert sich also mit c die Zahl der Spuren und nicht die Last je Spur;
   der Vergleich „eine gemeinsame gegen c getrennte“ hält die Gesamtkapazität gleich.
 - „Getrennte Schlangen“ heißt hier **zufällige Zuteilung**. Wählen Kunden die kürzeste Schlange, liegt das Ergebnis zwischen
-  beiden Fällen; das ist nicht Gegenstand dieses Stücks.
+  beiden Fällen; das ist nicht Gegenstand dieses Stücks, sondern von
+  [power-of-d-demo](https://github.com/sebastian-hanisch/power-of-d-demo) (Stück 7).
 - Alle Spuren sind gleich schnell, und die Schlange ist FIFO ohne Prioritäten.
 - Der Spurbedarf rechnet mit der **mittleren** Wartezeit; Ziele wie „95 % der Lkw warten höchstens 5 min“ führen zu anderen
   Spurzahlen (nicht untersucht).
@@ -92,7 +93,7 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 | Unbegrenzte Schlange | M/M/c/c (Erlang B) |
 | Unendliche Geduld | [Erlang A](https://github.com/sebastian-hanisch/erlang-a-demo) |
 | Konstante Ankunftsrate | [Wurzel-Personalregel (Halfin-Whitt)](https://github.com/sebastian-hanisch/square-root-staffing-demo), [zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |
-| Eine gemeinsame Schlange, kein Kunde wählt | Power-of-d-Choices |
+| Eine gemeinsame Schlange, kein Kunde wählt | [Power-of-d-Choices](https://github.com/sebastian-hanisch/power-of-d-demo) |
 | Alle Lkw gleich wichtig | Prioritätsklassen |
 
 Kein Folgestück: unterschiedlich schnelle Spuren.
