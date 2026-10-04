@@ -89,7 +89,7 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 
 | Annahme | Folgestück |
 |---|---|
-| Abfertigungsdauer exponentiell | M/G/1, Kingman-Näherung |
+| Abfertigungsdauer exponentiell | [M/G/1, Kingman-Näherung](https://github.com/sebastian-hanisch/mg1-kingman-demo) |
 | Unbegrenzte Schlange | [M/M/c/c (Erlang B)](https://github.com/sebastian-hanisch/erlang-b-demo) |
 | Unendliche Geduld | [Erlang A](https://github.com/sebastian-hanisch/erlang-a-demo) |
 | Konstante Ankunftsrate | [Wurzel-Personalregel (Halfin-Whitt)](https://github.com/sebastian-hanisch/square-root-staffing-demo), [zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |

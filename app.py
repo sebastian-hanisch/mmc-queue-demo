@@ -284,7 +284,7 @@ st.markdown(
     """
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
-| **Abfertigungsdauer exponentiell** | Die Wartezeit hängt von der Streuung der Dauer ab; Erlang C gilt dann nicht mehr. | **M/G/1, Kingman-Näherung** (Folgestück) |
+| **Abfertigungsdauer exponentiell** | Die Wartezeit hängt von der Streuung der Dauer ab; Erlang C gilt dann nicht mehr. | **[M/G/1, Kingman-Näherung](https://sebastianhanisch-mg1-kingman-demo.streamlit.app/)** |
 | **Unbegrenzte Schlange** | Stellplätze sind knapp: wer bei voller Zufahrt ankommt, geht verloren. Das Gegenstück ohne Warten heißt Erlang B; `ems_demo` prüft sich an dieser Formel. | **[M/M/c/c (Erlang B)](https://sebastianhanisch-erlang-b-demo.streamlit.app/)** |
 | **Unendliche Geduld** | Niemand dreht um. Mit Abwanderung bleibt auch bei Überlast ein Gleichgewicht. | **[Erlang A](https://sebastianhanisch-erlang-a-demo.streamlit.app/)** |
 | **Konstante Ankunftsrate** | Echte Gates haben Morgenspitzen; die Gleichgewichtsformel mit dem Tagesmittel unterschätzt die Spitze. | **[Wurzel-Personalregel (Halfin-Whitt)](https://sebastianhanisch-square-root-staffing-demo.streamlit.app/)**, **[zeitvariable Ankünfte](https://sebastianhanisch-time-varying-arrivals-demo.streamlit.app/)** |
