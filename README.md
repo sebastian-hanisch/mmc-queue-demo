@@ -76,7 +76,7 @@ Alle Zahlen stehen in `tests/test_claims.py`; Zeiten bei 3 min Abfertigung je Sp
 - [`mm1-queue-demo`](https://github.com/sebastian-hanisch/mm1-queue-demo) (Stück 1): der Fall c = 1.
 - [`output-analysis-demo`](https://github.com/sebastian-hanisch/output-analysis-demo) (Stück 2): Intervalle für Simulationsläufe, deren
   Probleme hier bei mehr Spuren geprüft werden.
-- [`ems_demo`](https://github.com/sebastian-hanisch/ems_demo): Rettungsdienst-Standortplanung mit dem **Hypercube Queueing
+- [`ems_demo`](https://github.com/sebastian-hanisch/ems-demo): Rettungsdienst-Standortplanung mit dem **Hypercube Queueing
   Model**, einer Markov-Kette über mehrere Server; ihr Korrektheitstest ist die **Erlang-B**-Formel des Verlustsystems. Hier ist
   es das Wartesystem (Erlang C); Erlang B behandelt ein Folgestück der Linie.
 
