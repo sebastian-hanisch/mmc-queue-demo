@@ -105,6 +105,13 @@ def test_run_to_run_spread_does_not_shrink_with_more_lanes():
     assert round(100 * spread[-1]) == 31
 
 
+def test_start_bias_is_small_at_the_default_run_length_and_large_at_short_runs():
+    """README: ρ = 90 %, 10 000 Lkw (Voreinstellung, Presets): höchstens 2.5 % unter der Formel; 1 000 Lkw: 9-16 % darunter."""
+    for c in C.GRID_C:
+        assert -3.5 < cell(c, 90, 10000)["naive"]["bias_pct"] < 1.5
+        assert -20 < cell(c, 90, 1000)["naive"]["bias_pct"] < -7
+
+
 def test_start_bias_at_short_high_utilisation_runs():
     """README: ρ = 95 %, 1 000 Lkw: Mittelwert 27–33 % unter der Formel für alle Spurzahlen; bei 50 000 Lkw im Rauschen."""
     for c in C.GRID_C:

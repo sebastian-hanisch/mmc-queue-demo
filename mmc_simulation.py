@@ -7,6 +7,11 @@ Aufbau nach Einheiten (je Ereignistyp ein Handler, kein versteckter Zustand):
   - `kw_waits`: Wartezeiten ohne Ereignisliste (Server-Freizeiten in einem Heap), aus denselben Zufallszahlen
   - `separate_waits`: c getrennte Schlangen, jeder ankommende Lkw wird zufällig einer Spur zugeteilt
 
+Der Lauf startet leer und wertet alle Lkw aus, ohne Einschwingzeit: das ist hier gewollt (Thema der Intervall-Probleme, Stück 2).
+Der Bias ist gemessen (vorgerechnete Messreihe, 400 Läufe je Zelle, `bias_pct` der Wartezeit gegen die Formel): bei ρ = 90 % und 10 000 Lkw
+(Voreinstellung und Presets) höchstens 2.5 % zu niedrig, bei 1 000 Lkw 9 bis 16 %; bei ρ = 95 % und 1 000 Lkw 27 bis 33 %. Bei ρ = 97 %,
+16 Spuren: 1 000 Lkw 60 %, 10 000 Lkw 13 % zu niedrig (60 Läufe, Scratch-Messung). Kurze Läufe bei hoher Auslastung liegen also unter der Formel.
+
 Zufall nur über übergebene `SplitMix64`-Generatoren (reine Ganzzahl-Arithmetik, Portfolio-Konvention): Ankünfte und
 Bedienzeiten haben je einen EIGENEN Strom, die Zuteilung zu Spuren einen dritten. Dadurch liefern Ereignissimulation und
 Kiefer-Wolfowitz-Rekursion Zahl für Zahl dieselben Wartezeiten."""

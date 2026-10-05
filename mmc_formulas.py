@@ -85,4 +85,4 @@ def min_servers(a, mu, target_wq):
 
 def rule_of_thumb_servers(a, max_rho=0.8):
     """Faustregel: so viele Spuren, dass die Auslastung höchstens `max_rho` beträgt."""
-    return math.ceil(a / max_rho)
+    return math.ceil(a / max_rho - 1e-9)   # Toleranz: 2,1 / 0,7 ist in Gleitkomma 3,0000000000000004, die Faustregel verlangt aber genau 3 Spuren

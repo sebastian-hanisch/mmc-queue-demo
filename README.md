@@ -47,7 +47,7 @@ Alle Zahlen stehen in `tests/test_claims.py`; Zeiten bei 3 min Abfertigung je Sp
 | Trifft das naive 95-%-Intervall bei mehr Spuren? | **Nein, in keiner der 120 Zellen** (5 Spurzahlen × 4 Auslastungen × 6 Lauflängen) häufiger als in 51 % der Fälle. Bei ρ = 90 % und 10 000 Lkw für c = 1, 2, 4, 8, 16 in 8–11 % der Fälle. |
 | Und Batch Means? | Bei ρ = 90 % und 10 000 Lkw mit 20 Batches 81–84 % für alle Spurzahlen; bei ρ = 95 % und 50 000 Lkw 83–87 %. **5 Batches sind in 117 von 120 Zellen mindestens so gut wie 20**; bei 50 000 Lkw und ρ ≤ 90 % trifft das Intervall mit 5 Batches in mindestens 91 % der Fälle. |
 | Schrumpft die Streuung eines Laufs mit mehr Spuren? | **Nein, sie wächst**: relative Standardabweichung der Wartezeit bei ρ = 90 % und 10 000 Lkw 21 % (c = 1), 21 %, 21 %, 24 % (c = 8), **31 %** (c = 16). |
-| Startverzerrung bei kurzen Läufen? | ρ = 95 %, 1 000 Lkw: Mittelwert für alle Spurzahlen 27–33 % unter der Formel; bei 50 000 Lkw im Rauschen. |
+| Startverzerrung bei kurzen Läufen? | ρ = 95 %, 1 000 Lkw: Mittelwert für alle Spurzahlen 27–33 % unter der Formel; bei 50 000 Lkw im Rauschen. Bei ρ = 90 % (Voreinstellung und Presets) und 10 000 Lkw höchstens 2.5 % unter der Formel (Standardfehler des Mittels rund 1 Prozentpunkt), bei 1 000 Lkw 9–16 %. Die Läufe starten bewusst leer und werten alles aus (das Thema von Stück 2), ohne Einschwingzeit: Die Anzeige „simuliert gegen Formel“ liegt bei kurzen Läufen hoher Auslastung zu niedrig. |
 
 ## Befunde und Korrekturen gegenüber dem Plan
 
@@ -100,7 +100,7 @@ Kein Folgestück: unterschiedlich schnelle Spuren.
 
 ## Tests
 
-121 Tests, rund 15 s: Erlang C gegen die abgeschnittene Geburts-Sterbe-Kette und gegen die Lehrbuchsumme (c = 1 bis 20),
+133 Tests, rund 45 s (davon `test_oracle_erlang_c.py`: Erlang B/C in exakter Bruchrechnung, Erlang-Mischung für P(Wq > t), Simulation und getrennte Schlangen gegen eine Kunde-für-Kunde-Rechnung): Erlang C gegen die abgeschnittene Geburts-Sterbe-Kette und gegen die Lehrbuchsumme (c = 1 bis 20),
 Handwerte (c = 2, a = 1: C = 1/3), Simulation gegen eine von Hand gerechnete Vier-Lkw-Instanz an zwei Spuren (Wartezeiten,
 ∫N dt, ∫Nq dt, beschäftigte Spuren, Zeit je Zustand, Treppenkurve, getrennte Schlangen), Ereignissimulation gegen
 Kiefer-Wolfowitz Kunde für Kunde (c = 1 bis 16), Little's Gesetz als Pfadidentität, Spurbedarf und Faustregel von Hand,

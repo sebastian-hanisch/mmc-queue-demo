@@ -106,5 +106,16 @@ def test_rule_of_thumb_by_hand():
     assert F.rule_of_thumb_servers(10) == 13 and F.rule_of_thumb_servers(2) == 3 and F.rule_of_thumb_servers(100) == 125
 
 
+def test_rule_of_thumb_does_not_round_up_an_exactly_integer_ratio():
+    """Exakte Bruchrechnung als Orakel: 2,1 / 0,7 = 3 genau, in Gleitkomma 3,0000000000000004 (früher 4 Spuren)."""
+    from fractions import Fraction
+
+    cases = [(2.1, 0.7), (4.2, 0.7), (6.0, 0.6), (9.0, 0.9), (3.0, 0.75), (10, 0.8), (8, 0.8), (5.6, 0.8)]
+    for a, rho in cases:
+        exact = math.ceil(Fraction(str(a)) / Fraction(str(rho)))
+        assert F.rule_of_thumb_servers(a, rho) == exact, (a, rho)
+    assert F.rule_of_thumb_servers(2.1, 0.7) == 3 and F.rule_of_thumb_servers(2.1000001, 0.7) == 4
+
+
 def test_offered_load_and_utilisation():
     assert F.offered_load(0.9, 0.3) == pytest.approx(3.0) and F.utilisation(4, 0.9, 0.3) == pytest.approx(0.75)
