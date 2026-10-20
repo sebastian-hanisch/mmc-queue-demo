@@ -54,6 +54,17 @@ Weiter unten: wie viele Spuren eine Ziel-Wartezeit verlangt, und ob die Interval
 verschwinden.
 """
 )
+
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/mmc-warteschlange-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Ein Gate mit mehreren gleich schnellen Spuren: Die wartenden Lkw stehen in einer gemeinsamen Schlange, und wer an der Reihe ist, nimmt die erste frei werdende Spur. Die Demo vergleicht das mit getrennten Schlangen, bei denen jeder Lkw zufällig einer Spur zugeteilt wird und nur dort wartet. Das Zusammenlegen verkürzt die Wartezeit stark, und der Gewinn wächst mit der Zahl der Spuren. Außerdem zeigt die Demo, wie viele Spuren ein Gate für eine Ziel-Wartezeit braucht und dass die Unsicherheit eines einzelnen Simulationslaufs mit mehr Spuren nicht verschwindet. Es ist ein vereinfachtes Modell mit gleich schnellen Spuren und ohne Prioritäten.
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/mmc-warteschlange-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
 st.caption(
     "Drittes Stück der Linie „Warteschlangentheorie und Simulation“, aufbauend auf "
     "[mm1-queue-demo](https://sebastianhanisch-mm1-queue-demo.streamlit.app/) (eine Spur, c = 1) und "
@@ -304,6 +315,26 @@ st.caption(
 st.markdown("---")
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/mmc-warteschlange-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind die Ankunftsrate $\lambda$, die Abfertigungsrate $\mu$ je Spur und die Zahl der Spuren $c$. Gesucht sind die Wahrscheinlichkeit zu warten, die mittlere Wartezeit mit gemeinsamer und mit getrennten Schlangen und der Faktor zwischen beiden.
+
+| Symbol | Bedeutung |
+|---|---|
+| $\lambda$, $\mu$ | Ankunftsrate und Abfertigungsrate je Spur |
+| $c$ | Zahl der Spuren |
+| $a = \lambda/\mu$ | Angebot: so viele Spuren sind im Mittel gleichzeitig beschäftigt |
+| $\rho = a/c$ | Auslastung je Spur (Gleichgewicht nur für $\rho < 1$) |
+| $p_n$ | Wahrscheinlichkeit, dass auf lange Sicht $n$ Lkw im System sind |
+| $C(c, a)$ | Erlang C: Wahrscheinlichkeit, dass ein ankommender Lkw warten muss |
+| $W_q$ | mittlere Wartezeit in der Schlange (gemeinsame Schlange) |
+| $W_q^{\text{getrennt}}$ | mittlere Wartezeit bei $c$ getrennten Schlangen mit je einer Spur |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/mmc-warteschlange-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Modell** (Kendall-Notation M/M/c): Poisson-Ankünfte mit Rate $\lambda$, exponentielle Abfertigung mit Rate $\mu$ je Spur,

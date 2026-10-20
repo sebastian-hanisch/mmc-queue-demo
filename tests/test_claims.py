@@ -79,9 +79,9 @@ def test_naive_interval_never_covers_more_than_about_half_in_any_cell():
 
 
 def test_naive_coverage_at_90_percent_utilisation_is_the_same_for_every_lane_count():
-    """README: bei ρ = 90 % und 10 000 Lkw trifft das naive Intervall für c = 1, 2, 4, 8, 16 in 7–11 % der Fälle."""
+    """README: bei ρ = 90 % und 10 000 Lkw trifft das naive Intervall für c = 1, 2, 4, 8, 16 in 8–11 % der Fälle (gemessen 8,0 bis 10,5 %)."""
     covers = [cell(c, 90, 10000)["naive"]["cover"] for c in C.GRID_C]
-    assert min(covers) > 0.04 and max(covers) < 0.14
+    assert min(covers) > 0.075 and max(covers) < 0.115
 
 
 def test_batch_means_coverage_quoted_in_readme():
