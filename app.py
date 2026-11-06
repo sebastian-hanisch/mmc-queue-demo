@@ -264,8 +264,8 @@ else:
     verdict = f"{rule_text}: **genau das Nötige**."
 st.info(
     f"Für das Angebot a = {load_a} und höchstens {target} min Wartezeit genügen **{row['c']} Spuren** bei {C.fmt_pct(row['rho'])} "
-    f"Auslastung. {verdict} Große Gates dürfen bei gleichem Service heißer laufen als kleine: das ist der Skaleneffekt, "
-    "den die Wurzel-Personalregel des Folgestücks genau beschreibt."
+    f"Auslastung. {verdict} Große Gates dürfen bei gleichem Service heißer laufen als kleine: das ist der Skaleneffekt. "
+    "Die Wurzel-Personalregel des Folgestücks beschreibt ihn für den Fall, dass die Wartewahrscheinlichkeit fest bleibt."
 )
 
 st.markdown("---")
@@ -354,8 +354,9 @@ $P(W_q > t) = C\,e^{-(c\mu-\lambda)t}$.
 mit Rate $\lambda/c$: $W_q^{\text{getrennt}} = \frac{\rho}{\mu - \lambda/c}$. Der **Pooling-Faktor** ist
 $W_q^{\text{getrennt}}/W_q^{\text{gemeinsam}}$.
 
-**Spurbedarf.** Die kleinste ganze Zahl $c > a$ mit $W_q(c, a) \le$ Ziel; sie wächst ungefähr wie $a$ plus ein Vielfaches von
-$\sqrt a$ (das Thema der Wurzel-Personalregel).
+**Spurbedarf.** Die kleinste ganze Zahl $c > a$ mit $W_q(c, a) \le$ Ziel; bei festem Minutenziel ist der Überschuss über $a$ klein und beschränkt (höchstens
+$1/(\mu w)$ Spuren bei Ziel $w$, nachgerechnet bis $a = 1000$). Die Form „$a$ plus ein Vielfaches von $\sqrt a$“ gilt erst im
+Halfin-Whitt-Regime, wenn die Wartewahrscheinlichkeit fest bleibt (das Thema der Wurzel-Personalregel).
 
 **Simulation.** Ereignisliste mit Ankünften und Abgängen für $c$ Spuren; zur Gegenprobe die **Kiefer-Wolfowitz-Rekursion**: ein
 ankommender Lkw nimmt die Spur, die am frühesten frei wird, $W = \max(0,\ \text{früheste Freizeit} - \text{Ankunft})$.
