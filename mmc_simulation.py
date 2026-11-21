@@ -2,7 +2,7 @@
 unabhängige zweite Rechnung die Kiefer-Wolfowitz-Rekursion und das Gegenstück mit c getrennten Schlangen.
 
 Aufbau nach Einheiten (je Ereignistyp ein Handler, kein versteckter Zustand):
-  - `handle_arrival`, `handle_departure`: Zustandsübergänge der Ereignissimulation
+  - `handle_arrival`, `handle_departure`: Zustandsübergänge der ereignisdiskreten Simulation
   - `simulate`: Ereignisschleife (Komposition, keine eigene Regel)
   - `kw_waits`: Wartezeiten ohne Ereignisliste (Server-Freizeiten in einem Heap), aus denselben Zufallszahlen
   - `separate_waits`: c getrennte Schlangen, jeder ankommende Lkw wird zufällig einer Spur zugeteilt
@@ -13,7 +13,7 @@ Der Bias ist gemessen (vorgerechnete Messreihe, 400 Läufe je Zelle, `bias_pct` 
 16 Spuren: 1 000 Lkw 60 %, 10 000 Lkw 13 % zu niedrig (60 Läufe, Scratch-Messung). Kurze Läufe bei hoher Auslastung liegen also unter der Formel.
 
 Zufall nur über übergebene `SplitMix64`-Generatoren (reine Ganzzahl-Arithmetik, Portfolio-Konvention): Ankünfte und
-Bedienzeiten haben je einen EIGENEN Strom, die Zuteilung zu Spuren einen dritten. Dadurch liefern Ereignissimulation und
+Bedienzeiten haben je einen EIGENEN Strom, die Zuteilung zu Spuren einen dritten. Dadurch liefern ereignisdiskrete Simulation und
 Kiefer-Wolfowitz-Rekursion Zahl für Zahl dieselben Wartezeiten."""
 
 import heapq

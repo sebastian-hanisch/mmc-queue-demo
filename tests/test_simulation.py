@@ -1,4 +1,4 @@
-"""Simulation: Generator, Drei-Lkw-Instanz an zwei Spuren von Hand, Ereignissimulation gegen Kiefer-Wolfowitz-Rekursion,
+"""Simulation: Generator, Drei-Lkw-Instanz an zwei Spuren von Hand, ereignisdiskrete Simulation gegen Kiefer-Wolfowitz-Rekursion,
 Little's Gesetz als Pfadidentität, getrennte Schlangen."""
 
 import pytest

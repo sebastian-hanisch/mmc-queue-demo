@@ -102,7 +102,7 @@ Kein Folgestück: unterschiedlich schnelle Spuren.
 
 133 Tests, rund 45 s (davon `test_oracle_erlang_c.py`: Erlang B/C in exakter Bruchrechnung, Erlang-Mischung für P(Wq > t), Simulation und getrennte Schlangen gegen eine Kunde-für-Kunde-Rechnung): Erlang C gegen die abgeschnittene Geburts-Sterbe-Kette und gegen die Lehrbuchsumme (c = 1 bis 20),
 Handwerte (c = 2, a = 1: C = 1/3), Simulation gegen eine von Hand gerechnete Vier-Lkw-Instanz an zwei Spuren (Wartezeiten,
-∫N dt, ∫Nq dt, beschäftigte Spuren, Zeit je Zustand, Treppenkurve, getrennte Schlangen), Ereignissimulation gegen
+∫N dt, ∫Nq dt, beschäftigte Spuren, Zeit je Zustand, Treppenkurve, getrennte Schlangen), ereignisdiskrete Simulation gegen
 Kiefer-Wolfowitz Kunde für Kunde (c = 1 bis 16), Little's Gesetz als Pfadidentität, Spurbedarf und Faustregel von Hand,
 Vollständigkeit der vorgerechneten Datei, Presets/Permalink, AppTest-Rauchtests und `test_claims.py` für jede Zahl dieser README.
 
@@ -112,7 +112,7 @@ Vollständigkeit der vorgerechneten Datei, Presets/Permalink, AppTest-Rauchtests
 |---|---|
 | `app.py` | Streamlit-Oberfläche |
 | `mmc_formulas.py` | Erlang C, Verteilungen, getrennte Schlangen, Spurbedarf |
-| `mmc_simulation.py` | Generator, Ereignissimulation mit Handlern, Kiefer-Wolfowitz, getrennte Schlangen |
+| `mmc_simulation.py` | Generator, ereignisdiskrete Simulation mit Handlern, Kiefer-Wolfowitz, getrennte Schlangen |
 | `mmc_estimators.py` | naives Intervall, Batch Means (Kopie aus output-analysis-demo) |
 | `mmc_evaluation.py` | Kennzahlen, Verteilungen, Pooling-Vergleich, Personalbedarf, Abdeckungsstudie |
 | `generate_precomputed.py` | rechnet die Messreihe vor → `precomputed_sweep.json` |

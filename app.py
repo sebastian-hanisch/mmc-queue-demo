@@ -363,7 +363,7 @@ ankommender Lkw nimmt die Spur, die am frühesten frei wird, $W = \max(0,\ \text
 Ankünfte, Bedienzeiten und die Spurzuteilung haben getrennte Zufallsströme (SplitMix64); beide Rechnungen liefern Kunde für
 Kunde dieselben Wartezeiten.
 
-Implementiert in `mmc_formulas.py` (Erlang C, Verteilungen, Spurbedarf), `mmc_simulation.py` (Ereignissimulation,
+Implementiert in `mmc_formulas.py` (Erlang C, Verteilungen, Spurbedarf), `mmc_simulation.py` (Ereignisdiskrete Simulation,
 Kiefer-Wolfowitz, getrennte Schlangen), `mmc_evaluation.py` (Kennzahlen, Verteilungen, Pooling, Abdeckungsstudie),
 `generate_precomputed.py` (vorgerechnete Messreihe).
         """

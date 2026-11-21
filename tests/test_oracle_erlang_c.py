@@ -1,5 +1,5 @@
 """Orakel mit anderem Rechenweg: (1) Erlang B/C in exakter Bruchrechnung (Summenformel, auch für c ≈ 200), (2) P(Wq > t) als Erlang-Mischung über die abgeschnittene Kette,
-(3) Spurbedarf per Brute Force, (4) die Ereignissimulation und die getrennten Schlangen gegen eine Kunde-für-Kunde-Rechnung (frühester freier Server per Listensuche, kein Heap, keine Ereignisliste)."""
+(3) Spurbedarf per Brute Force, (4) die ereignisdiskrete Simulation und die getrennten Schlangen gegen eine Kunde-für-Kunde-Rechnung (frühester freier Server per Listensuche, kein Heap, keine Ereignisliste)."""
 
 import math
 import random
